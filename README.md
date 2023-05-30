@@ -1,6 +1,6 @@
 # YUMMIE Food Delivery App: Home Page UI with SwiftUI
 
-![APP UI](foodapp.png)
+![APP UI](foodui.png)
 
 ## Project Overview
 - I developed this project using SwiftUI, MVVM, Combine, and integrated it with Yummie's backend for data.
