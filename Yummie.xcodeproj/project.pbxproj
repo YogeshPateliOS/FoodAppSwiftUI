@@ -11,6 +11,10 @@
 		90D1AC032A22714500CA16B6 /* SectionTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D1AC022A22714500CA16B6 /* SectionTitleView.swift */; };
 		90D1AC052A22714D00CA16B6 /* PopularDishesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D1AC042A22714D00CA16B6 /* PopularDishesView.swift */; };
 		90D1AC072A22715600CA16B6 /* RecommendedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D1AC062A22715600CA16B6 /* RecommendedView.swift */; };
+		90D1AC0A2A22DC8400CA16B6 /* DishDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D1AC092A22DC8400CA16B6 /* DishDetailView.swift */; };
+		90D1AC0E2A2691A800CA16B6 /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D1AC0D2A2691A800CA16B6 /* OnboardView.swift */; };
+		90D1AC102A2693CD00CA16B6 /* OnboardScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D1AC0F2A2693CD00CA16B6 /* OnboardScreenView.swift */; };
+		90D1AC122A26A16100CA16B6 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D1AC112A26A16100CA16B6 /* Router.swift */; };
 		90ED7EC22A2108C6001B59B3 /* YummieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ED7EC12A2108C6001B59B3 /* YummieApp.swift */; };
 		90ED7EC42A2108C6001B59B3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ED7EC32A2108C6001B59B3 /* HomeView.swift */; };
 		90ED7EC62A2108C7001B59B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90ED7EC52A2108C7001B59B3 /* Assets.xcassets */; };
@@ -30,6 +34,10 @@
 		90D1AC022A22714500CA16B6 /* SectionTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTitleView.swift; sourceTree = "<group>"; };
 		90D1AC042A22714D00CA16B6 /* PopularDishesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularDishesView.swift; sourceTree = "<group>"; };
 		90D1AC062A22715600CA16B6 /* RecommendedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedView.swift; sourceTree = "<group>"; };
+		90D1AC092A22DC8400CA16B6 /* DishDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailView.swift; sourceTree = "<group>"; };
+		90D1AC0D2A2691A800CA16B6 /* OnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardView.swift; sourceTree = "<group>"; };
+		90D1AC0F2A2693CD00CA16B6 /* OnboardScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardScreenView.swift; sourceTree = "<group>"; };
+		90D1AC112A26A16100CA16B6 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		90ED7EBE2A2108C6001B59B3 /* Yummie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yummie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90ED7EC12A2108C6001B59B3 /* YummieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummieApp.swift; sourceTree = "<group>"; };
 		90ED7EC32A2108C6001B59B3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -56,6 +64,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90D1AC082A22DC5800CA16B6 /* DishDetail */ = {
+			isa = PBXGroup;
+			children = (
+				90D1AC092A22DC8400CA16B6 /* DishDetailView.swift */,
+			);
+			path = DishDetail;
+			sourceTree = "<group>";
+		};
+		90D1AC0B2A26912700CA16B6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				90ED7EC12A2108C6001B59B3 /* YummieApp.swift */,
+				90ED7EC52A2108C7001B59B3 /* Assets.xcassets */,
+				90ED7ECA2A2108C7001B59B3 /* Persistence.swift */,
+				90ED7ECC2A2108C7001B59B3 /* Yummie.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		90D1AC0C2A26917D00CA16B6 /* Onboard */ = {
+			isa = PBXGroup;
+			children = (
+				90D1AC0D2A2691A800CA16B6 /* OnboardView.swift */,
+				90D1AC0F2A2693CD00CA16B6 /* OnboardScreenView.swift */,
+			);
+			path = Onboard;
+			sourceTree = "<group>";
+		};
 		90ED7EB52A2108C6001B59B3 = {
 			isa = PBXGroup;
 			children = (
@@ -75,13 +111,10 @@
 		90ED7EC02A2108C6001B59B3 /* Yummie */ = {
 			isa = PBXGroup;
 			children = (
-				90ED7EDE2A21096B001B59B3 /* Screens */,
 				90ED7ED52A210914001B59B3 /* Service */,
 				90ED7ED42A21090D001B59B3 /* Utilities */,
-				90ED7EC12A2108C6001B59B3 /* YummieApp.swift */,
-				90ED7EC52A2108C7001B59B3 /* Assets.xcassets */,
-				90ED7ECA2A2108C7001B59B3 /* Persistence.swift */,
-				90ED7ECC2A2108C7001B59B3 /* Yummie.xcdatamodeld */,
+				90ED7EDE2A21096B001B59B3 /* Screens */,
+				90D1AC0B2A26912700CA16B6 /* Resources */,
 				90ED7EC72A2108C7001B59B3 /* Preview Content */,
 			);
 			path = Yummie;
@@ -101,6 +134,7 @@
 				90ED7ED62A210921001B59B3 /* Strings.swift */,
 				90ED7ED82A21092C001B59B3 /* NetworkError.swift */,
 				90ED7EDA2A210935001B59B3 /* ViewState.swift */,
+				90D1AC112A26A16100CA16B6 /* Router.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -116,7 +150,9 @@
 		90ED7EDE2A21096B001B59B3 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				90D1AC0C2A26917D00CA16B6 /* Onboard */,
 				90ED7EDF2A210977001B59B3 /* Home */,
+				90D1AC082A22DC5800CA16B6 /* DishDetail */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -233,14 +269,18 @@
 				90ED7EE42A2109EA001B59B3 /* HomeViewModel.swift in Sources */,
 				90ED7EDB2A210935001B59B3 /* ViewState.swift in Sources */,
 				90ED7EDD2A21095F001B59B3 /* NetworkService.swift in Sources */,
+				90D1AC122A26A16100CA16B6 /* Router.swift in Sources */,
 				90D1AC072A22715600CA16B6 /* RecommendedView.swift in Sources */,
 				90ED7ECE2A2108C7001B59B3 /* Yummie.xcdatamodeld in Sources */,
 				90D1AC012A22713900CA16B6 /* CategoryView.swift in Sources */,
 				90ED7EE62A210C7E001B59B3 /* ErrorView.swift in Sources */,
+				90D1AC102A2693CD00CA16B6 /* OnboardScreenView.swift in Sources */,
 				90D1AC052A22714D00CA16B6 /* PopularDishesView.swift in Sources */,
 				90ED7ED72A210921001B59B3 /* Strings.swift in Sources */,
 				90ED7ED92A21092C001B59B3 /* NetworkError.swift in Sources */,
 				90ED7EC42A2108C6001B59B3 /* HomeView.swift in Sources */,
+				90D1AC0E2A2691A800CA16B6 /* OnboardView.swift in Sources */,
+				90D1AC0A2A22DC8400CA16B6 /* DishDetailView.swift in Sources */,
 				90ED7EC22A2108C6001B59B3 /* YummieApp.swift in Sources */,
 				90D1AC032A22714500CA16B6 /* SectionTitleView.swift in Sources */,
 			);

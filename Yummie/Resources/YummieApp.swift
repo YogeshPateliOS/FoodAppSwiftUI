@@ -13,7 +13,7 @@ struct YummieApp: App {
 
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            OnboardScreenView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
 
     @StateObject private var viewModel = HomeViewModel()
+    @State var isNavigationToDish = false
 
     var body: some View {
         NavigationStack {
@@ -58,7 +59,10 @@ struct HomeView: View {
                             ScrollView(.horizontal, showsIndicators: false) {
                                 LazyHStack {
                                     ForEach(allDishes.populars) { dish in
-                                        PopularDishesView(dish: dish)
+                                        NavigationLink(destination: DishDetailView(dish: dish)) {
+                                            PopularDishesView(dish: dish)
+                                        }
+                                        .buttonStyle(PlainButtonStyle())
                                     }
                                 }
                             }.frame(height: 250)
@@ -81,7 +85,10 @@ struct HomeView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color(UIColor.secondarySystemBackground))
-        }
+//            .navigationDestination(isPresented: $isNavigationToDish, destination: {
+//                DishDetailView()
+//            })
+        }.accentColor(.pink)
         .onAppear {
             viewModel.fetchAllDishes()
         }
@@ -92,5 +99,11 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+    }
+}
+
+struct EmptyButtonStyle: ButtonStyle {
+    func makeBody(configuration: Self.Configuration) -> some View {
+        configuration.label
     }
 }
