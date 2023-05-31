@@ -1,4 +1,4 @@
-# YUMMIE Food Delivery App: Home Page UI with SwiftUI
+# Experience Delicious: A SwiftUI Food Delivery App
 
 ![APP UI](foodui.png)
 
