@@ -10,6 +10,7 @@ import SwiftUI
 struct OnboardScreenView: View {
 
     @State private var selection: Int = 0
+    @Binding var showOnboarding: Bool
 
     var body: some View {
         TabView(selection: $selection) {
@@ -29,7 +30,7 @@ struct OnboardScreenView: View {
                         description: "Our delivery team works tirelessly to ensure that your food arrives hot, fresh and on time.",
                         showDoneButton: true,
                         nextAction: {
-                Router.showMain()
+                showOnboarding = false
             })
             .tag(2)
 
@@ -47,6 +48,6 @@ struct OnboardScreenView: View {
 
 struct OnboardScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardScreenView()
+        OnboardScreenView(showOnboarding: .constant(true))
     }
 }

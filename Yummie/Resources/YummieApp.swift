@@ -9,12 +9,16 @@ import SwiftUI
 
 @main
 struct YummieApp: App {
-    let persistenceController = PersistenceController.shared
+
+    @AppStorage("showOnboarding") var showOnboarding: Bool = true
 
     var body: some Scene {
         WindowGroup {
-            OnboardScreenView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            if showOnboarding {
+                OnboardScreenView(showOnboarding: $showOnboarding)
+            }else {
+                HomeView()
+            }
         }
     }
 }
