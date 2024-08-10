@@ -17,7 +17,7 @@ struct HomeView: View {
             ZStack {
                 switch viewModel.viewState {
                 case .loading:
-                    ProgressView("Fetching dishes, Please Be Patient")
+                    ProgressView(Strings.fetchingRecords)
                 case .error(let message):
                     ErrorView(message) {
                         viewModel.fetchAllDishes()
@@ -35,7 +35,6 @@ struct HomeView: View {
     var mainContent: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack {
-
                 VStack(spacing: 5) {
                     Text("Hello Yogesh")
                         .font(.title)
@@ -50,11 +49,8 @@ struct HomeView: View {
                 if let allDishes = viewModel.allDishes {
 
                     // Start Food Category
-
                     VStack(alignment: .leading) {
-
                         SectionTitleView(title: "Food Category")
-
                         if let dishes = allDishes.categories {
                             ScrollView(.horizontal, showsIndicators: false) {
                                 LazyHStack {
@@ -65,16 +61,10 @@ struct HomeView: View {
                             }.frame(height: 128)
                         }
                     }.padding(.bottom)
-
                     // End Food Category
-
-
                     // Start Popular
-
                     VStack(alignment: .leading) {
-
                         SectionTitleView(title: "Popular Dishes")
-
                         ScrollView(.horizontal, showsIndicators: false) {
                             LazyHStack {
                                 ForEach(allDishes.populars) { dish in
@@ -86,18 +76,14 @@ struct HomeView: View {
                             }
                         }.frame(height: 250)
                     }.padding(.bottom, 8)
-
                     // End Popular
-
                     // Start Recommended
-
                     SectionTitleView(title: "Recommended")
                     LazyVStack {
                         ForEach(allDishes.specials) { dish in
                             RecommendedView(dish: dish)
                         }
                     }
-
                     // End Recommended
                 }
             }.padding()
